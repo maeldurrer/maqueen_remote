@@ -16,22 +16,34 @@
         # # # # # 
         # # # # # 
         # # # # #
-        `</field></block></next></block></next></block></next></block></statement></block><block type="device_forever" id="r@Z;/=W?ruODxLqWX|Fg" x="338" y="-7"></block><block type="radio_on_string_drag" id="d;I#u)ra.1)g)sy+dvd8" x="618" y="3"><value name="HANDLER_DRAG_PARAM_receivedString"><shadow type="argument_reporter_string" id="1%vE,dq?dEAzuj[gQ]ZH"><field name="VALUE">receivedString</field></shadow></value><statement name="HANDLER"><block type="controls_if" id="oN9htzT$jiC)W:X/__UI"><mutation elseif="1" else="1"></mutation><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="X1vC1d!n161r?vaFHJkT"><field name="OP">EQ</field><value name="A"><shadow type="text"><field name="TEXT"></field></shadow><block type="argument_reporter_string" id="D4RcSU4TD*-Z](X/jkSz"><field name="VALUE">receivedString</field></block></value><value name="B"><shadow type="text" id="/bF;z?`{ZcC:HfVYzzW!"><field name="TEXT">vor</field></shadow></value></block></value><statement name="DO0"><block type="device_show_leds" id="FmY=n:uFDIjmi#k{uq,$"><field name="LEDS">`
+        `</field></block></next></block></next></block></next></block></statement></block><block type="device_forever" id="r@Z;/=W?ruODxLqWX|Fg" x="338" y="-7"></block><block type="radio_on_string_drag" id="d;I#u)ra.1)g)sy+dvd8" x="618" y="3"><value name="HANDLER_DRAG_PARAM_receivedString"><shadow type="argument_reporter_string" id="1%vE,dq?dEAzuj[gQ]ZH"><field name="VALUE">receivedString</field></shadow></value><statement name="HANDLER"><block type="controls_if" id="oN9htzT$jiC)W:X/__UI"><mutation elseif="3" else="1"></mutation><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="X1vC1d!n161r?vaFHJkT"><field name="OP">EQ</field><value name="A"><shadow type="text"><field name="TEXT"></field></shadow><block type="argument_reporter_string" id="D4RcSU4TD*-Z](X/jkSz"><field name="VALUE">receivedString</field></block></value><value name="B"><shadow type="text" id="/bF;z?`{ZcC:HfVYzzW!"><field name="TEXT">vor</field></shadow></value></block></value><statement name="DO0"><block type="device_show_leds" id="FmY=n:uFDIjmi#k{uq,$"><field name="LEDS">`
         . . # . . 
         . # # # . 
         # . # . # 
         . . # . . 
         . . # . .
-        `</field></block></statement><value name="IF1"><block type="logic_compare" id="ckAh@fpGM!#3Y#K^TH[F"><field name="OP">EQ</field><value name="A"><shadow type="text"><field name="TEXT"></field></shadow><block type="argument_reporter_string" id="Y|;gH5$F5=/;CS_O})v)"><field name="VALUE">receivedString</field></block></value><value name="B"><shadow type="text" id="TU7Vj$2`MZNx#.kbXoq,"><field name="TEXT">zurück</field></shadow></value></block></value><statement name="DO1"><block type="device_show_leds" id="YRxNI-:#Mu/ZK0LbuHu6"><field name="LEDS">`
+        `</field><next><block type="motor_MotorRun" id="(C-`[#)Nz)C2,*IGw4tt"><field name="index">maqueen.Motors.All</field><field name="Dir">maqueen.Dir.CW</field><value name="speed"><shadow type="math_number_minmax" id="?g*PBRr6(9h`}EUDchl8"><mutation min="0" max="255" label="Speed" precision="0"></mutation><field name="SLIDER">50</field></shadow></value></block></next></block></statement><value name="IF1"><block type="logic_compare" id="ckAh@fpGM!#3Y#K^TH[F"><field name="OP">EQ</field><value name="A"><shadow type="text"><field name="TEXT"></field></shadow><block type="argument_reporter_string" id="Y|;gH5$F5=/;CS_O})v)"><field name="VALUE">receivedString</field></block></value><value name="B"><shadow type="text" id="TU7Vj$2`MZNx#.kbXoq,"><field name="TEXT">zurück</field></shadow></value></block></value><statement name="DO1"><block type="device_show_leds" id="YRxNI-:#Mu/ZK0LbuHu6"><field name="LEDS">`
         . . # . . 
         . . # . . 
         # . # . # 
         . # # # . 
         . . # . .
-        `</field></block></statement><statement name="ELSE"><block type="device_show_leds" id="L|1CdRR*sEH4[b8Of)NH"><field name="LEDS">`
+        `</field><next><block type="motor_MotorRun" id="N.8c3X7YK,Wz1rUa.SSb"><field name="index">maqueen.Motors.All</field><field name="Dir">maqueen.Dir.CCW</field><value name="speed"><shadow type="math_number_minmax" id="I`LQ2UIH!D`)~TRr@-Nc"><mutation min="0" max="255" label="Speed" precision="0"></mutation><field name="SLIDER">50</field></shadow></value></block></next></block></statement><value name="IF2"><block type="logic_compare" id="01yW1wzQ9}Daz,0c6632"><field name="OP">EQ</field><value name="A"><shadow type="text"><field name="TEXT"></field></shadow><block type="argument_reporter_string" id=".HE0@tX43W~:@(Y:#|gO"><field name="VALUE">receivedString</field></block></value><value name="B"><shadow type="text" id="b`otoj)Q:=(:az;IZh`1"><field name="TEXT">links</field></shadow></value></block></value><statement name="DO2"><block type="device_show_leds" id="/T^@boxPxAHdq,=Jjy6A"><field name="LEDS">`
+        . . # . . 
+        . # . . . 
+        # # # # # 
+        . # . . . 
+        . . # . .
+        `</field><next><block type="motor_motorStop" id="As+rWTvb]%tok@3doByl"><field name="motors">maqueen.Motors.M1</field><next><block type="motor_MotorRun" id="NtSM)P1?h1HWfNjHH+9A"><field name="index">maqueen.Motors.M2</field><field name="Dir">maqueen.Dir.CW</field><value name="speed"><shadow type="math_number_minmax" id="P9+r@zGpz)RW))TRN.lT"><mutation min="0" max="255" label="Speed" precision="0"></mutation><field name="SLIDER">50</field></shadow></value></block></next></block></next></block></statement><value name="IF3"><block type="logic_compare" id="Y*GDg7/LhKW(X1,v}~hq"><field name="OP">EQ</field><value name="A"><shadow type="text"><field name="TEXT"></field></shadow><block type="argument_reporter_string" id="_*|(F)YXX!%,-Aqa,qoY"><field name="VALUE">receivedString</field></block></value><value name="B"><shadow type="text" id="F)HD+vtKcv^N(wTa*-aM"><field name="TEXT">rechts</field></shadow></value></block></value><statement name="DO3"><block type="device_show_leds" id="{Z%~1R=PF8e8}na!j6GM"><field name="LEDS">`
+        . . # . . 
+        . . . # . 
+        # # # # # 
+        . . . # . 
+        . . # . .
+        `</field><next><block type="motor_motorStop" id="_tPd7z#6t@:n9(|XO2On"><field name="motors">maqueen.Motors.M2</field><next><block type="motor_MotorRun" id="km7.3~H({TjhW@U^?xXc"><field name="index">maqueen.Motors.M1</field><field name="Dir">maqueen.Dir.CW</field><value name="speed"><shadow type="math_number_minmax" id="t)yN!~Q}i~5%Nrbf4jNG"><mutation min="0" max="255" label="Speed" precision="0"></mutation><field name="SLIDER">50</field></shadow></value></block></next></block></next></block></statement><statement name="ELSE"><block type="device_show_leds" id="L|1CdRR*sEH4[b8Of)NH"><field name="LEDS">`
         . . . . . 
         . . . . . 
         . . # . . 
         . . . . . 
         . . . . .
-        `</field></block></statement></block></statement></block><block type="text" id="(JZ-Q})`mw!HB1PE/EU{" disabled="true" x="874" y="9"><field name="TEXT"></field></block></xml>
+        `</field><next><block type="motor_motorStop" id=",I4i%JE4a1M5Q#;V{z^N"><field name="motors">maqueen.Motors.All</field></block></next></block></statement></block></statement></block><block type="text" id="(JZ-Q})`mw!HB1PE/EU{" disabled="true" x="874" y="9"><field name="TEXT"></field></block></xml>
