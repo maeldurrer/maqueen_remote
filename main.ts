@@ -1,5 +1,6 @@
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "vor") {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -7,8 +8,8 @@ radio.onReceivedString(function (receivedString) {
             . . # . .
             . . # . .
             `)
-        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 50)
     } else if (receivedString == "zurück") {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 255)
         basic.showLeds(`
             . . # . .
             . . # . .
@@ -16,18 +17,9 @@ radio.onReceivedString(function (receivedString) {
             . # # # .
             . . # . .
             `)
-        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 50)
     } else if (receivedString == "links") {
-        basic.showLeds(`
-            . . # . .
-            . # . . .
-            # # # # #
-            . # . . .
-            . . # . .
-            `)
         maqueen.motorStop(maqueen.Motors.M1)
-        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 50)
-    } else if (receivedString == "rechts") {
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 80)
         basic.showLeds(`
             . . # . .
             . . . # .
@@ -35,9 +27,18 @@ radio.onReceivedString(function (receivedString) {
             . . . # .
             . . # . .
             `)
+    } else if (receivedString == "rechts") {
         maqueen.motorStop(maqueen.Motors.M2)
-        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 50)
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 80)
+        basic.showLeds(`
+            . . # . .
+            . # . . .
+            # # # # #
+            . # . . .
+            . . # . .
+            `)
     } else {
+        maqueen.motorStop(maqueen.Motors.All)
         basic.showLeds(`
             . . . . .
             . . . . .
@@ -45,7 +46,6 @@ radio.onReceivedString(function (receivedString) {
             . . . . .
             . . . . .
             `)
-        maqueen.motorStop(maqueen.Motors.All)
     }
 })
 radio.setGroup(1)
